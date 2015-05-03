@@ -8,7 +8,7 @@
     .col-sm-6.col-md-4
       - row.each do |pawnshop_request|
         .thumbnail
-          = image_tag pawnshop_request.image
+          = image_tag pawnshop_request.image.thumb
           .caption
             h3 = pawnshop_request.name
             p = request_price(pawnshop_request)
