@@ -18,7 +18,7 @@ gem 'jquery-rails'
 
 # Media
 gem "carrierwave"
-# gem "mini_magick"
+gem "mini_magick"
 
 # Utils
 gem "awesome_print"
