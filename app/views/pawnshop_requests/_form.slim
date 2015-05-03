@@ -1,0 +1,9 @@
+= simple_form_for @pawnshop_request, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f|
+  .form-body
+    = f.input :email, required: false
+    = f.input :name, required: false
+    = f.input :image, required: false
+
+    .row
+      .col-sm-offset-3.col-sm-9
+        = f.submit t('actions.save'), class: 'btn btn-success'

@@ -1,3 +1,10 @@
+actions:
+  destroy: Удалить
+  edit: Изменить
+  save: Сохранить
+  show: Просмотр
+  back: Назад
+
 pawnshop_request_states:
   approved: Одобрена
   new_request: В рассмотрении
