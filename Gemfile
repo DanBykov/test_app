@@ -31,6 +31,9 @@ gem "simple_form", "~> 3.1.0"
 # Async
 gem "sucker_punch"
 
+# Translations
+gem "r18n-rails"
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
