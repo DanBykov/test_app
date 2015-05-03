@@ -1,2 +1,15 @@
-h1 PawnshopRequest#index
-p Find me in app/views/pawnshop_request/index.html.slim
+
+
+.row
+  - @pawnshop_requests.each_slice(2) do |row|
+    .col-sm-6.col-md-4
+      - row.each do |pawnshop_request|
+        .thumbnail
+          = image_tag pawnshop_request.image
+          .caption
+            h3 = pawnshop_request.name
+            p = pawnshop_request.price
+            p = pawnshop_request.state
+            / p
+            /   a.btn.btn-primary href="#" role="button"  Button
+            /   a.btn.btn-default href="#" role="button"  Button

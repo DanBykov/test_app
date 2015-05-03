@@ -8,6 +8,7 @@ gem 'rails', '4.2.1'
 gem 'pg'
 
 # Styles
+gem 'bootstrap-sass', '~> 3.3.4'
 gem 'sass-rails', '~> 5.0'
 
 # Javascript
