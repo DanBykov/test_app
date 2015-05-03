@@ -1,0 +1,4 @@
+pawnshop_request_states:
+  approved: Одобрена
+  new_request: В рассмотрении
+  rejected: Отклонена

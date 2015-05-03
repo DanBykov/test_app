@@ -1,4 +1,7 @@
-
+.text-center
+  = link_to 'Подать заявку', :new_pawnshop_request, class: 'btn btn-success'
+  br
+  br
 
 .row
   - @pawnshop_requests.each_slice(2) do |row|
@@ -8,8 +11,8 @@
           = image_tag pawnshop_request.image
           .caption
             h3 = pawnshop_request.name
-            p = pawnshop_request.price
-            p = pawnshop_request.state
+            p = request_price(pawnshop_request)
+            p = request_state(pawnshop_request)
             / p
             /   a.btn.btn-primary href="#" role="button"  Button
             /   a.btn.btn-default href="#" role="button"  Button

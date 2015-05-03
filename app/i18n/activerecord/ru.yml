@@ -1,0 +1,8 @@
+activerecord:
+  attributes:
+    pawnshop_request:
+      email: Email
+      image: Изображение
+      name: Название
+      state: Статус
+
