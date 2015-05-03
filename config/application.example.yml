@@ -1,0 +1,5 @@
+# Add application configuration variables here, as shown below.
+
+SECRET_KEY_BASE: 76f8e33c8fbf030c33ff36dc2309430ed07da4c2d8ab34e6185fc24d6cf568896fd1986839d6f3ceec5817ddf86221c8ddf5dc76997e3720ff1eac7540efbea9
+
+DATABASE_URL: "postgres://username:password@localhost"
