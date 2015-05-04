@@ -50,5 +50,16 @@ module TestApp
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.action_mailer.smtp_settings = {
+      address: "smtp.gmail.com",
+      port: 587,
+      user_name: ENV["MAILER_USER_NAME"],
+      password: ENV["MAILER_PASSWORD"],
+      authentication: "plain",
+      enable_starttls_auto: true,
+      # ssl: true,
+      domain: "mail.google.com"
+    }
   end
 end

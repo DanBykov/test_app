@@ -9,6 +9,7 @@ class PawnshopRequestManager
 
   def update(params)
     @pawnshop_request.state = 'approved'
+    MailJob.new.async.approved(@pawnshop_request.email)
     @pawnshop_request.update(params)
   end
 
