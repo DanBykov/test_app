@@ -4,5 +4,6 @@ activerecord:
       email: Email
       image: Изображение
       name: Название
+      price: Цена
       state: Статус
 

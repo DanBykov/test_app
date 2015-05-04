@@ -11,8 +11,7 @@ class PawnshopRequestsController < ApplicationController
     @pawnshop_request = PawnshopRequest.new(pawnshop_request_params)
 
     if @pawnshop_request.save
-      redirect_to :pawnshop_requests,
-        notice: 'PawnshopRequest was successfully created.'
+      redirect_to :pawnshop_requests
     else
       render :new
     end

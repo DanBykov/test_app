@@ -9,11 +9,14 @@ class Admin::PawnshopRequestsController < Admin::ApplicationController
   end
 
   def update
-    if @pawnshop_request.update
-      redirect_to :pawnshop_requests,
-        notice: 'PawnshopRequest was successfully updated.'
+    if params[:reject].present?
+      PawnshopRequestManager.new(@pawnshop_request).reject
+      redirect_to [:admin, :pawnshop_requests]
+    elsif PawnshopRequestManager.new(@pawnshop_request)
+                                  .update(pawnshop_request_params)
+      redirect_to [:admin, :pawnshop_requests]
     else
-      render :new
+      render :edit
     end
   end
 
