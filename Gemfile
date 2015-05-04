@@ -34,6 +34,9 @@ gem "sucker_punch"
 # Translations
 gem "r18n-rails"
 
+# Auth
+gem 'devise'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
