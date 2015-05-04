@@ -1,0 +1,11 @@
+table.table
+  tr
+    td Название
+    td Изображение
+    td Статус
+    td
+  - @pawnshop_requests.each do |pawnshop_request|
+    tr
+      td = pawnshop_request.name
+      td = image_tag pawnshop_request.image.small
+      td = request_state_with_buttons(pawnshop_request)

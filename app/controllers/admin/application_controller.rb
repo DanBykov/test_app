@@ -5,6 +5,8 @@ class Admin::ApplicationController < ActionController::Base
 
   before_filter :authenticate_admin!
 
+  layout 'application'
+
   private
 
   def set_locale

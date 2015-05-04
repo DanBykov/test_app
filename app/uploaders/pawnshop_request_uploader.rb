@@ -8,4 +8,8 @@ class PawnshopRequestUploader < ApplicationUploader
   version :thumb do
     process resize_to_fill: [350, 263]
   end
+
+  version :small do
+    process resize_to_fill: [87, 65]
+  end
 end

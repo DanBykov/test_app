@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root "pawnshop_requests#index"
+    resources :pawnshop_requests, only: %w(index edit update)
   end
 end
