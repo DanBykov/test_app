@@ -2,7 +2,10 @@ class Admin::PawnshopRequestsController < Admin::ApplicationController
   before_action :set_pawnshop_request, only: %w(edit update)
 
   def index
-    @pawnshop_requests = PawnshopRequest.all
+    respond_to do |f|
+      f.html { @pawnshop_requests = PawnshopRequest.all }
+      f.csv { send_data Statistics.import_to_csv }
+    end
   end
 
   def edit

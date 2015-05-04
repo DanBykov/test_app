@@ -11,4 +11,15 @@ class PawnshopRequestManager
     @pawnshop_request.state = 'approved'
     @pawnshop_request.update(params)
   end
+
+  def create
+    @pawnshop_request.admin = true if admin?(@pawnshop_request.email)
+    @pawnshop_request.save
+  end
+
+  private
+
+    def admin?(email)
+      Admin.where(email: email).present?
+    end
 end

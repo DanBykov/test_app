@@ -10,7 +10,7 @@ class PawnshopRequestsController < ApplicationController
   def create
     @pawnshop_request = PawnshopRequest.new(pawnshop_request_params)
 
-    if @pawnshop_request.save
+    if PawnshopRequestManager.new(@pawnshop_request).create
       redirect_to :pawnshop_requests
     else
       render :new
